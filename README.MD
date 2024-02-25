@@ -12,3 +12,8 @@ You have three total days (including weekends and holidays) to work on this asse
 - Use Express middleware.
 - Use a template engine to render views with Express.
 - Interact with a self-made API through HTML forms.
+
+
+This is an application assignment for class.
+
+Unfinished.
