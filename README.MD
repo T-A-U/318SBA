@@ -16,4 +16,6 @@ You have three total days (including weekends and holidays) to work on this asse
 
 This is an application assignment for class.
 
+Used https://www.codingthesmartway.com/how-to-create-a-basic-express-web-app/ to help create the app.
+
 Unfinished.
