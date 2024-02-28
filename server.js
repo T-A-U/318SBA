@@ -73,6 +73,28 @@ app.get("/HPrefill", (req,res) => {
 });
 
 
+// Create POST routes for data, as appropriate. At least one data category should allow for client creation via a POST request. Dunno what theme this project even is yet. So ill have to come back to this.
+app.post('/users/new', async (req, res) => {
+    try {
+     const user = await User.add({ userFullName: req.user.name, userName: req.user.username, userEmail: req.user.email });
+     res.json(user);
+    } catch (err) {
+     console.log(err);
+     res.json({ error: err.toString() });
+    }
+   });
+
+// Create PATCH or PUT routes for data, as appropriate. At least one data category should allow for client manipulation via a PATCH or PUT request. Still dunno theme yet so must come back to this.
+   app.put('/user/update', async (req, res) => {
+    try {
+     const user = await User.update({ userFullName: req.user.name, userName: req.user.username, userEmail: req.user.email });
+     res.json(user);
+    } catch (err) {
+     console.log(err);
+     res.json({ error: err.toString() });
+    }
+    })
+
 
 
 
