@@ -96,7 +96,7 @@ app.put('/user/update', async (req, res) => {
     })
 
 // Create DELETE routes for data, as appropriate. At least one data category should allow for client deletion via a DELETE request. come back to. Somethin' pokemon themed
-    app.delete('/user/delete', async (req, res) => {
+     app.delete('/user/delete', async (req, res) => {
         try {
          const user = await User.delete({ userFullName: req.user.name, userName: req.user.username, userEmail: req.user.email });
          res.json(user);
@@ -131,6 +131,34 @@ app.get("/pokeballs?cost=200", (req,res) => {
   
     res.json(pokeballs.cost=200);
 });
+
+//Utilize route parameters, where appropriate. Not working for individual ids yet
+app.get("/pokeballs/:id", (req,res) => {
+    const pokeballs = [
+        {
+            id: 1,
+            name: "pokeball",
+            cost:200
+        },
+        {
+            id: 2,
+            name: "Greatball",
+            cost:600
+        },
+        {
+        id: 3,
+        name: "Ultraball",
+        cost:1200
+        },
+    ];
+  
+    res.json(pokeballs[1]);
+});
+
+//Create and render at least one view using a view template and template engine. This can be a custom template engine or a third-party engine.If you are stuck on how to approach this, think about ways you could render the current state of your API's data for easy viewing.
+
+
+
 
 
 
